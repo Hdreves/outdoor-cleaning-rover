@@ -3,6 +3,13 @@ marp: true
 theme: default
 paginate: true
 size: 16:9
+style: |
+  section.video-slide {
+    text-align: center;
+  }
+  section.video-slide h1 {
+    margin-bottom: 0.35em;
+  }
 ---
 
 # CSC 494 Final Presentation  
@@ -20,8 +27,6 @@ size: 16:9
 Outdoor pet waste cleanup.
 
  The goal was to create a rover that can move around outside, perform the task of picking up pet waste, and put it in a bin. This prevents having to do it manually by hand and dealing with the cleanup. This problem combined power distribution, mechanical design, sensing, and control logic in order to come up with a solution.
-
-
 
 ---
 
@@ -62,6 +67,15 @@ My solution uses a small rover with motors, a scoop/dump mechanism powered by a 
 
 ---
 
+<!-- _class: video-slide -->
+
+# Final Demo
+
+<video controls preload="metadata" width="960">
+  <source src="./FinalDemo.mp4" type="video/mp4">
+</video>
+
+---
 # Learning With AI
 
 ## AI helped with
