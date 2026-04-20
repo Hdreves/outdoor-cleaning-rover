@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Rover Control</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>Rover Control</h1>
+            <p class="subtitle">Pirover dashboard</p>
+        </header>
+
+        <section class="card">
+            <h2>Safety</h2>
+            <div class="button-row">
+                <button class="stop" onclick="sendCommand('emergency_stop')">EMERGENCY STOP</button>
+                <button class="warning" onclick="sendCommand('clear_estop')">Clear E-Stop</button>
+                <button class="dark" onclick="sendCommand('stop')">Normal Stop</button>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>Status</h2>
+            <div class="status-grid">
+                <div><strong>Connected:</strong> <span id="connected_badge" class="badge offline">offline</span></div>
+                <div><strong>Drive:</strong> <span id="drive">stopped</span></div>
+                <div><strong>Scoop:</strong> <span id="scoop">idle</span></div>
+                <div><strong>Mode:</strong> <span id="mode">manual</span></div>
+                <div><strong>Camera:</strong> <span id="camera">offline</span></div>
+                <div><strong>E-Stop:</strong> <span id="estop_badge" class="badge estop-off">inactive</span></div>
+                <div><strong>Last Command:</strong> <span id="last_command">none</span></div>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>Telemetry</h2>
+            <div class="status-grid">
+                <div><strong>Left Encoder Ticks:</strong> <span id="left_ticks">0</span></div>
+                <div><strong>Right Encoder Ticks:</strong> <span id="right_ticks">0</span></div>
+                <div><strong>ToF Distance:</strong> <span id="tof_distance">--</span></div>
+            </div>
+        </section>
+        
+        <section class="card">
+            <h2>Drive Controls</h2>
+            <div class="drive-grid">
+                <div></div>
+                <button id="btn-forward">Forward</button>
+                <div></div>
+
+                <button id="btn-left">Left</button>
+                <button class="stop" onclick="sendCommand('stop')">Stop</button>
+                <button id="btn-right">Right</button>
+
+                <div></div>
+                <button id="btn-reverse">Reverse</button>
+                <div></div>
+            </div>
+        </section>
+        
+        <section class="card">
+            <h2>Scoop Controls</h2>
+            <div class="button-row">
+                <button id="btn-scoop-up" class="secondary">Scoop Up</button>
+                <button id="btn-scoop-down" class="secondary">Scoop Down</button>
+                <button id="btn-dump" class="secondary">Dump</button>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>Mode</h2>
+            <div class="button-row">
+                <button onclick="sendCommand('manual')">Manual</button>
+                <button onclick="sendCommand('test')">Test</button>
+                <button onclick="sendCommand('idle')">Idle</button>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>Camera</h2>
+            <div class="camera-box">
+                <img id="camera_feed" class="camera-feed" src="/camera/stream" alt="Camera feed" style="display: none;" />
+                <p id="camera_text">No stream connected yet</p>
+            </div>
+            <div class="button-row">
+                <button onclick="sendCommand('camera_on')">Camera On</button>
+                <button onclick="sendCommand('camera_off')">Camera Off</button>
+            </div>
+        </section>
+    </div>
+
+    <script src="/static/app.js"></script>
+</body>
+</html>
