@@ -3,13 +3,6 @@ marp: true
 theme: default
 paginate: true
 size: 16:9
-style: |
-  section.video-slide {
-    text-align: center;
-  }
-  section.video-slide h1 {
-    margin-bottom: 0.35em;
-  }
 ---
 
 # CSC 494 Final Presentation  
@@ -67,15 +60,36 @@ My solution uses a small rover with motors, a scoop/dump mechanism powered by a 
 
 ---
 
-<!-- _class: video-slide -->
+# Movement Demo
 
-# Final Demo
-
-<video controls preload="metadata" width="960">
-  <source src="./FinalDemo.mp4" type="video/mp4">
-</video>
+[Open this file on GitHub](https://github.com/Hdreves/outdoor-cleaning-rover/blob/main/Media/Demos/Movement.mp4)
 
 ---
+
+# Scooping Demo
+
+[Open this file on GitHub](https://github.com/Hdreves/outdoor-cleaning-rover/blob/main/Media/Demos/Scooping.mp4)
+
+---
+
+# Dumping Demo
+
+[Open this file on GitHub](https://github.com/Hdreves/outdoor-cleaning-rover/blob/main/Media/Demos/Dumping.mp4)
+
+---
+
+# Webpage 1
+
+![width:1000px](./Media/Webpage/1.png)
+
+---
+
+# Webpage 2
+
+![width:1000px](./Media/Webpage/2.png)
+
+---
+
 # Learning With AI
 
 ## AI helped with
